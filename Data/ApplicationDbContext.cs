@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace cms_pract.Data
 {
@@ -11,6 +12,8 @@ namespace cms_pract.Data
             : base(options)
         {
         }
+
+        public DbSet<ContactsEmail> ContactsEmails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -44,6 +47,11 @@ namespace cms_pract.Data
             {
                 entity.ToTable("UserTokens");
             });
+
+            builder.Entity<CmsPractUser>()
+            .HasMany(u => u.ContactsEmail)
+            .WithOne(e => e.UserProfile)
+            .HasForeignKey(e => e.UserProfileId);
         }
     }
 }

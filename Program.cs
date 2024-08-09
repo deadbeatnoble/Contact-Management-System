@@ -1,5 +1,6 @@
 using cms_pract.Data;
 using cms_pract.Models;
+using MailKit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
@@ -67,6 +68,7 @@ builder.Services.AddAuthentication()
         };
     });
 
+builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 

@@ -1,0 +1,34 @@
+﻿@model cms_pract.Models.LinkedInContactsInfoViewModel
+@{
+    ViewData["Title"] = "Contacts Info";
+}
+
+
+<h1>LinkedIn Contacts</h1>
+<a href="@Url.Action("RedirectToLinkedIn", "Home")">Connect with LinkedIn</a>
+<ul>
+    @foreach(var email in Model.emails)
+    {
+        <li>@email</li>
+        <form method="post" asp-action="RemoveEmail">
+            <input hidden type="text" name="removeEmail" value="@email" />
+            <button type="submit">Remove</button>
+        </form>
+    }
+</ul>
+<form asp-action="SendMail" method="post">
+    <button type="submit">Send Email</button>
+</form>
+
+<div>
+    <form method="post" asp-action="ContactsInfo">
+
+        <div>
+            <p>Enter Contacts Email</p>
+            <div>
+                <input type="text" asp-for="email" value="" />
+            </div>
+        </div>
+        <button type="submit">+ Add Email</button>
+    </form>
+</div>

@@ -229,6 +229,29 @@ namespace cms_pract.Data.Migrations
                     b.ToTable("User", "cms-pract.Identity");
                 });
 
+            modelBuilder.Entity("cms_pract.Models.ContactsEmail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserProfileId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserProfileId");
+
+                    b.ToTable("ContactsEmails", "cms-pract.Identity");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -278,6 +301,22 @@ namespace cms_pract.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("cms_pract.Models.ContactsEmail", b =>
+                {
+                    b.HasOne("cms_pract.Models.CmsPractUser", "UserProfile")
+                        .WithMany("ContactsEmail")
+                        .HasForeignKey("UserProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserProfile");
+                });
+
+            modelBuilder.Entity("cms_pract.Models.CmsPractUser", b =>
+                {
+                    b.Navigation("ContactsEmail");
                 });
 #pragma warning restore 612, 618
         }

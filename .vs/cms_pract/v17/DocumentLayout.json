@@ -3,26 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_cms_pract_3df35c2e_e468_48e3_a1f5_3bd3c901367f/True/SqlTable/cms_pract.Identity.UserTokens.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_cms_pract_3df35c2e_e468_48e3_a1f5_3bd3c901367f/True/SqlTable/cms_pract.Identity.UserClaims.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\views\\home\\contactsinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:views\\home\\contactsinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\models\\linkedincontactsinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:models\\linkedincontactsinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_cms_pract_3df35c2e_e468_48e3_a1f5_3bd3c901367f/True/SqlTable/cms_pract.Identity.ContactsEmails.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\cms_pract\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A23AAADE-C8AD-4EF5-A653-6FF9B95005FF}|cms_pract.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,78 +37,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "cms_pract.Identity.UserTokens [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_cms_pract_3df35c2e_e468_48e3_a1f5_3bd3c901367f/True/SqlTable/cms_pract.Identity.UserTokens.sql",
-              "ToolTip": "cms_pract.Identity.UserTokens [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-25T09:23:55.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "cms_pract.Identity.UserClaims [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_cms_pract_3df35c2e_e468_48e3_a1f5_3bd3c901367f/True/SqlTable/cms_pract.Identity.UserClaims.sql",
-              "ToolTip": "cms_pract.Identity.UserClaims [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-25T09:23:42.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExternalLogin.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAAAKEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T09:04:38.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAiwDMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T08:27:52.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAqwHoAAAA1AAAA",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAcwDkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T08:15:15.845Z",
+              "WhenOpened": "2024-08-09T11:53:30.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAASAAAA",
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-25T08:15:06.971Z",
+              "WhenOpened": "2024-08-09T09:53:08.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-09T09:52:24.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LinkedInContactsInfoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Models\\LinkedInContactsInfoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LinkedInContactsInfoViewModel.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Models\\LinkedInContactsInfoViewModel.cs",
+              "RelativeToolTip": "Models\\LinkedInContactsInfoViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T09:15:51.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "cms_pract.Identity.ContactsEmails [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_cms_pract_3df35c2e_e468_48e3_a1f5_3bd3c901367f/True/SqlTable/cms_pract.Identity.ContactsEmails.sql",
+              "ToolTip": "cms_pract.Identity.ContactsEmails [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-09T09:04:22.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContactsInfo.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Views\\Home\\ContactsInfo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ContactsInfo.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Views\\Home\\ContactsInfo.cshtml",
+              "RelativeToolTip": "Views\\Home\\ContactsInfo.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwA0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-09T08:36:01.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAUwI8AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T08:31:42.121Z",
               "EditorCaption": ""
             }
           ]

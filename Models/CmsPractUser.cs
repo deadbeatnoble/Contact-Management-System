@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.Collections;
 
 namespace cms_pract.Models
 {
@@ -6,5 +7,6 @@ namespace cms_pract.Models
     {
         public string FirstName {  get; set; }
         public string LastName { get; set; }
+        public ICollection<ContactsEmail> ContactsEmail { get; set; } = new List<ContactsEmail>();
     }
 }
