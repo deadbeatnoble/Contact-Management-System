@@ -14,6 +14,7 @@ namespace cms_pract.Data
         }
 
         public DbSet<ContactsEmail> ContactsEmails { get; set; }
+        public DbSet<Invitation> Invitations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

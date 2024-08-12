@@ -6,29 +6,69 @@
 
 <h1>LinkedIn Contacts</h1>
 <a href="@Url.Action("RedirectToLinkedIn", "Home")">Connect with LinkedIn</a>
-<ul>
-    @foreach(var email in Model.emails)
-    {
-        <li>@email</li>
-        <form method="post" asp-action="RemoveEmail">
-            <input hidden type="text" name="removeEmail" value="@email" />
-            <button type="submit">Remove</button>
-        </form>
-    }
-</ul>
-<form asp-action="SendMail" method="post">
-    <button type="submit">Send Email</button>
-</form>
+
 
 <div>
-    <form method="post" asp-action="ContactsInfo">
+    <form method="post" asp-action="ContactsInfo" style="display:flex;">
 
         <div>
-            <p>Enter Contacts Email</p>
-            <div>
-                <input type="text" asp-for="email" value="" />
-            </div>
+            <input type="text" asp-for="email" value="" placeholder="abc@gmail.com" />
         </div>
         <button type="submit">+ Add Email</button>
     </form>
 </div>
+
+
+<p>Saved Emails</p>
+<ul style="list-style-type:none;">
+    @if (Model.emails.Count == 0)
+    {
+        <p>No saved emails...</p>
+    }
+    else
+    {
+        @foreach (var email in Model.emails)
+        {
+            <div style="display:flex;gap:10px">
+            <li>@email.email</li>
+                @if (email.isSelected)
+                {
+                <form method="post" asp-action="UnselectEmail">
+                    <input hidden type="text" name="unselectedEmail" value="@email.email" />
+                    <button type="submit" style="background-color:lightgreen;color:lightgray">Unselect</button>
+                </form>
+                }
+                else
+                {
+                <form method="post" asp-action="SelectEmail">
+                    <input hidden type="text" name="selectedEmail" value="@email.email" />
+                    <button type="submit" style="background-color:green;color:black">Select</button>
+                </form>
+                }
+            <form method="post" asp-action="RemoveEmail">
+                <input hidden type="text" name="removeEmail" value="@email.email" />
+                <button type="submit" style="background-color:red">Remove</button>
+            </form>
+            </div>
+        }
+    }
+</ul>
+
+
+<p>Selected Emails</p>
+<ul style="list-style-type:none;">
+    @if (Model.emails.Where(em => em.isSelected).ToList().Count == 0)
+    {
+        <p>No selected emails...</p>
+    }
+    else
+    {
+        @foreach (var email in Model.emails.Where(em => em.isSelected).ToList())
+        {
+            <li>@email.email</li>
+        }
+    }
+</ul>
+<form asp-action="SendMail" method="post">
+    <button type="submit">Send Invitation Link</button>
+</form>

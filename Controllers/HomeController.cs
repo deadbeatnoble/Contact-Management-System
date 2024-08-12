@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 using cms_pract.Data;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using System.Security.Claims;
+using System.Runtime.CompilerServices;
 
 namespace cms_pract.Controllers
 {
@@ -78,12 +79,15 @@ namespace cms_pract.Controllers
             var user = await _userManager.GetUserAsync(User);
             if (user != null)
             {
-                var emails = await _applicationDbContext.ContactsEmails
+                var emailModels = await _applicationDbContext.ContactsEmails
                     .Where(e => e.UserProfileId == user.Id)
-                    .Select(e => e.Email)
+                    .Select(e => new EmailModel { 
+                        email = e.Email,
+                        isSelected = e.IsSelected
+                    })
                     .ToListAsync();
-                
-                return View(new LinkedInContactsInfoViewModel { emails = emails});
+                _linkedInContactsInfoViewModel.emails = emailModels;
+                return View(_linkedInContactsInfoViewModel);
             }
             return View(_linkedInContactsInfoViewModel);
         }
@@ -93,29 +97,114 @@ namespace cms_pract.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-
-
                 var user = await _userManager.GetUserAsync(User);
                 if (user != null)
                 {
-                    _linkedInContactsInfoViewModel.emails.Add(linkedInContactsInfoViewModel.email);
-                    user.ContactsEmail.Add(new ContactsEmail { Email = linkedInContactsInfoViewModel.email, UserProfileId = user.Id });
+                    _linkedInContactsInfoViewModel.emails.Add(new EmailModel {
+                        email = linkedInContactsInfoViewModel.email,
+                        isSelected = false
+                    });
+                    user.ContactsEmail.Add(new ContactsEmail { Email = linkedInContactsInfoViewModel.email, IsSelected = false, UserProfileId = user.Id });
 
                     // Save the changes to the database
                     _applicationDbContext.Update(user);
                     await _applicationDbContext.SaveChangesAsync();
 
-                    var  emails = await _applicationDbContext.ContactsEmails
+                    var  emailModels = await _applicationDbContext.ContactsEmails
                         .Where(e => e.UserProfileId == user.Id)
-                        .Select(e => e.Email)
+                        .Select(e => new EmailModel
+                        {
+                            email = e.Email,
+                            isSelected = e.IsSelected
+                        })
                         .ToListAsync();
 
-                    return View(new LinkedInContactsInfoViewModel { emails = emails});
+                    return View(new LinkedInContactsInfoViewModel { emails = emailModels});
                 }
             }
             return View(_linkedInContactsInfoViewModel);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> SelectEmail(LinkedInContactsInfoViewModel linkedInContactsInfoViewModel) 
+        {
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _applicationDbContext.Users.Include(u => u.ContactsEmail)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user != null)
+            {
+                var emailToSelect = user.ContactsEmail.FirstOrDefault(e => e.Email == linkedInContactsInfoViewModel.selectedEmail);
+                if (emailToSelect != null)
+                {
+                    emailToSelect.IsSelected = true;
+                    await _applicationDbContext.SaveChangesAsync();
+
+                    var updatedemails = await _applicationDbContext.ContactsEmails
+                        .Where(e => e.UserProfileId == user.Id)
+                        .Select(e => new EmailModel
+                        {
+                            email = e.Email,
+                            isSelected = e.IsSelected
+                        })
+                        .ToListAsync();
+
+                    return View("ContactsInfo", new LinkedInContactsInfoViewModel { emails = updatedemails });
+                }
+            }
+
+            var emails = await _applicationDbContext.ContactsEmails
+                        .Where(e => e.UserProfileId == user.Id)
+                        .Select(e => new EmailModel
+                        {
+                            email = e.Email,
+                            isSelected = e.IsSelected
+                        })
+                        .ToListAsync();
+
+            return View("ContactsInfo", new LinkedInContactsInfoViewModel { emails = emails });
+        }
+        [HttpPost]
+        public async Task<IActionResult> UnselectEmail(LinkedInContactsInfoViewModel linkedInContactsInfoViewModel)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _applicationDbContext.Users.Include(u => u.ContactsEmail)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user != null)
+            {
+                var emailToUnselect = user.ContactsEmail.FirstOrDefault(e => e.Email == linkedInContactsInfoViewModel.unselectedEmail);
+                if (emailToUnselect != null)
+                {
+                    emailToUnselect.IsSelected = false;
+                    await _applicationDbContext.SaveChangesAsync();
+
+                    var updatedemails = await _applicationDbContext.ContactsEmails
+                        .Where(e => e.UserProfileId == user.Id)
+                        .Select(e => new EmailModel
+                        {
+                            email = e.Email,
+                            isSelected = e.IsSelected
+                        })
+                        .ToListAsync();
+
+                    return View("ContactsInfo", new LinkedInContactsInfoViewModel { emails = updatedemails });
+                }
+            }
+
+            var emails = await _applicationDbContext.ContactsEmails
+                        .Where(e => e.UserProfileId == user.Id)
+                        .Select(e => new EmailModel
+                        {
+                            email = e.Email,
+                            isSelected = e.IsSelected
+                        })
+                        .ToListAsync();
+
+            return View("ContactsInfo", new LinkedInContactsInfoViewModel { emails = emails });
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> RemoveEmail(LinkedInContactsInfoViewModel linkedInContactsInfoViewModel) 
@@ -134,7 +223,7 @@ namespace cms_pract.Controllers
 
                     var updatedemails = await _applicationDbContext.ContactsEmails
                         .Where(e => e.UserProfileId == user.Id)
-                        .Select(e => e.Email)
+                        .Select(e => new EmailModel { email = e.Email, isSelected = e.IsSelected })
                         .ToListAsync();
 
                     return View("ContactsInfo", new LinkedInContactsInfoViewModel { emails = updatedemails });
@@ -143,12 +232,17 @@ namespace cms_pract.Controllers
 
             var emails = await _applicationDbContext.ContactsEmails
                         .Where(e => e.UserProfileId == user.Id)
-                        .Select(e => e.Email)
+                        .Select(e => new EmailModel
+                        {
+                            email = e.Email,
+                            isSelected = e.IsSelected
+                        })
                         .ToListAsync();
 
             return View("ContactsInfo", new LinkedInContactsInfoViewModel { emails = emails});
         }
-        
+
+
         [HttpPost]
         public async Task<IActionResult> SendMail()
         {
@@ -157,12 +251,32 @@ namespace cms_pract.Controllers
             {
                 var emails = await _applicationDbContext.ContactsEmails
                     .Where(e => e.UserProfileId == user.Id)
-                    .Select(e => e.Email)
-                    .ToListAsync();
+                    .Select(e => new EmailModel
+                    {
+                        email = e.Email,
+                        isSelected = e.IsSelected
+                    })
+                   .ToListAsync();
                 if (emails != null)
                 {
-                    foreach (var email in emails)
+                    foreach (var email in emails.Where(em => em.isSelected).ToList())
                     {
+
+                        //var token = GenerateToken();
+                        var expirationDate = DateTime.UtcNow.AddDays(1);
+                        var invitation = new Invitation
+                        {
+                            Email = email.email,
+                            //Token = token,
+                            ExpirationDate = expirationDate,
+                            IsUsed = false
+                        };
+                        _applicationDbContext.Invitations.Add(invitation);
+                        await _applicationDbContext.SaveChangesAsync();
+                        //var invitationLink = Url.Action("Register", "Identity/Account", new { token = token }, Request.Scheme);
+                        var invitationLink = "https://localhost:5001/Identity/Account/Register";
+                        
+
                         string fromMail = "fannuelgulelat74@gmail.com";
                         string fromPassword = "bzxj jqol rjzu tphu";
 
@@ -170,8 +284,8 @@ namespace cms_pract.Controllers
                         message.From = new MailAddress(fromMail);
 
                         message.Subject = "Invitation Link";
-                        message.To.Add(new MailAddress(email));
-                        message.Body = "<html><body> Hey! Join Contact Management system Platform</body></html>";
+                        message.To.Add(new MailAddress(email.email));
+                        message.Body = "<html><body>" + invitationLink  + "</body></html>";
                         message.IsBodyHtml = true;
 
                         var smtpClient = new SmtpClient("smtp.gmail.com")
@@ -260,5 +374,11 @@ namespace cms_pract.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public string GenerateToken()
+        {
+            return Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+        }
+
     }
 }
