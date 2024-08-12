@@ -52,8 +52,8 @@ namespace cms_pract.Controllers
         {
             //https://www.linkedin.com/oauth/v2/authorization
             //?response_type=code
-            //&client_id=772pvm3thtfpup
-            //&client_secret=UCyVpYZrYZ0N2SN6
+            //&client_id=_configuration["Authentication:LinkedIn:ClientId"]
+            //&client_secret=_configuration["Authentication:LinkedIn:ClientSecret"]
             //&redirect_uri=https://oauth.pstmn.io/v1/callback
             //&scope=email%20profile
 
@@ -63,8 +63,8 @@ namespace cms_pract.Controllers
             var query = HttpUtility.ParseQueryString(authorizationBaseUrl.Query);
 
             query["response_type"] = "code";
-            query["client_id"] = "772pvm3thtfpup";
-            query["client_secret"] = "UCyVpYZrYZ0N2SN6";
+            query["client_id"] = _configuration["Authentication:LinkedIn:ClientId"];
+            query["client_secret"] = _configuration["Authentication:LinkedIn:ClientSecret"];
             query["redirect_uri"] = "https://localhost:5001/Home/LinkedInCallback";
             query["scope"] = "email profile";
 
@@ -277,8 +277,8 @@ namespace cms_pract.Controllers
                         var invitationLink = "https://localhost:5001/Identity/Account/Register";
                         
 
-                        string fromMail = "fannuelgulelat74@gmail.com";
-                        string fromPassword = "bzxj jqol rjzu tphu";
+                        string fromMail = _configuration["Authentication:smtp:Username"];
+                        string fromPassword = _configuration["Authentication:smtp:Password"];
 
                         MailMessage message = new MailMessage();
                         message.From = new MailAddress(fromMail);
@@ -334,8 +334,8 @@ namespace cms_pract.Controllers
 
             query["grant_type"] = "authorization_code";
             query["code"] = code;
-            query["client_id"] = "772pvm3thtfpup";
-            query["client_secret"] = "UCyVpYZrYZ0N2SN6";
+            query["client_id"] = _configuration["Authentication:LinkedIn:ClientSecret"];
+            query["client_secret"] = _configuration["Authentication:LinkedIn:ClientSecret"];
             query["redirect_uri"] = "https://localhost:5001/Home/LinkedInCallback";
 
             accessTokenBaseUrl.Query = query.ToString();
@@ -355,9 +355,6 @@ namespace cms_pract.Controllers
                 else
                 {
                     return "no";
-                    var errorResponse = await response.Content.ReadAsStringAsync();
-                    _logger.LogError($"Token Exchange Failed: {errorResponse}");
-                    return null;
                 }
             }
         }
