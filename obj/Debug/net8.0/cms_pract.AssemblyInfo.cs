@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cms_pract")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ce933bf2d30b3f14b010a80e34ae5d009c8b6f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cddab272f3a882cc009d2c3fd5981cfffe769103")]
 [assembly: System.Reflection.AssemblyProductAttribute("cms_pract")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cms_pract")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
