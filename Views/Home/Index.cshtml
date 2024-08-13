@@ -2,7 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<body class="bg-image" style="background-image: url('/images/image1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div class="text-center">
+
+        <h1 class="display-4" fw-bold style="font-size: 4rem; color: white ;">Welcome To ContactHub</h1>
+        <br />
+        <h3 fw-bold style=" color: white;">Effortlessly Manage Your contacts</h3>
+        <br />
+        <p fw-bold style=" color:white;">Stay Organized and Build Stronger Relationships with Our All-in-One Contact Management Solution</p>
+        <br /><br />
+
+        <button style="
+            background-color: #000033; /* Blue-black color */
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: blink 1s infinite;
+            transition: background-color 0.3s, transform 0.3s;
+        " onmouseover="this.style.backgroundColor='#000066'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#000033'; this.style.transform='scale(1)';">
+            <a asp-area="Identity" asp-page="/Account/Register" style="color: white; text-decoration: none;">  Register Now</a>
+        </button>
+
+    </div>
+
+</body>

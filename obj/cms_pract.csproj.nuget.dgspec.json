@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\cms_pract.csproj": {}
+    "C:\\Users\\hp\\Videos\\Contact-Management-System\\cms_pract.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\cms_pract.csproj": {
+    "C:\\Users\\hp\\Videos\\Contact-Management-System\\cms_pract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\cms_pract.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Videos\\Contact-Management-System\\cms_pract.csproj",
         "projectName": "cms_pract",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\cms_pract.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\cms_pract\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Videos\\Contact-Management-System\\cms_pract.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Videos\\Contact-Management-System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
